@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >  	
+    
+<!-- new game button -->
+    <Button
+        android:id="@+id/new_game_button"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Game"
+        android:onClick="newGame"/>
+        
+    <!-- for the first dotted dice -->
+    <ImageView
+        android:id="@+id/dot_dice_image_one"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/new_game_button"
+        android:src="@drawable/six_dot_dice"
+        android:paddingTop="10dp"/>
+    <!-- for the second dotted dice -->
+    <ImageView
+        android:id="@+id/dot_dice_image_two"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/dot_dice_image_one"
+        android:src="@drawable/six_dot_dice"
+        android:paddingTop="10dp"/>
+
+    <!-- Text which shows total on dotted dice -->
+    <TextView
+        android:id="@+id/dot_dice_total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dot_dice_image_two"
+        android:layout_below="@id/dot_dice_image_two"
+        android:paddingTop="10dp"
+        android:text="Total : " />
+
+    <!-- for the first numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_one"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the second numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_two"
+        android:layout_below="@id/num_dice_image_one"
+        android:layout_alignRight="@id/num_dice_image_one"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the third numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_three"
+        android:layout_below="@id/num_dice_image_two"
+        android:layout_alignRight="@id/num_dice_image_two"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the fourth numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_four"
+        android:layout_below="@id/num_dice_image_three"
+        android:layout_alignRight="@id/num_dice_image_three"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the fifth numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_five"
+        android:layout_below="@id/num_dice_image_four"
+        android:layout_alignRight="@id/num_dice_image_four"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the sixth numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_six"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="70dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the seventh numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_seven"
+        android:layout_below="@id/num_dice_image_six"
+        android:layout_alignLeft="@id/num_dice_image_six"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the eighth numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_eight"
+        android:layout_below="@id/num_dice_image_seven"
+        android:layout_alignLeft="@id/num_dice_image_six"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the ninth numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_nine"
+        android:layout_below="@id/num_dice_image_eight"
+        android:layout_alignLeft="@id/num_dice_image_six"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    <!-- for the tenth numbered dice -->
+    <ImageView
+        android:id="@+id/num_dice_image_ten"
+        android:layout_below="@id/num_dice_image_nine"
+        android:layout_alignLeft="@id/num_dice_image_six"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPressNumDice"/>
+    
+    <!-- Submit move button -->
+    <Button
+        android:id="@+id/submit_num_dice_selection_button"
+        android:layout_alignLeft="@id/num_dice_image_ten"
+        android:layout_below="@id/num_dice_image_ten"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Submit move"
+        android:textSize="15dp"
+        android:onClick="onPressSubmitNumberedDiceSelectionButton"/>
+    <!-- Text which shows total of selected numbered dice -->
+    <TextView
+        android:id="@+id/selected_total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/num_dice_image_ten"
+        android:layout_below="@id/submit_num_dice_selection_button"
+        android:paddingTop="10dp"
+        android:text="Selected total : " />    
+        
+    <TextView
+        android:id="@+id/current_player_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dot_dice_total_text"
+        android:layout_below="@id/dot_dice_total_text"
+        android:text="Current player : "/>
+    
+    <Button
+        android:id="@+id/end_turn_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/current_player_text"
+        android:layout_below="@id/current_player_text"
+        android:text="End turn"
+        android:onClick="onPressEndTurnButton"/>
+    
+    <TextView
+        android:id="@+id/player_one_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dot_dice_total_text"
+        android:layout_below="@id/end_turn_button"
+        android:text="Player one Score : "/>
+    
+    <TextView
+        android:id="@+id/player_two_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dot_dice_total_text"
+        android:layout_below="@id/player_one_score_text"
+        android:text="Player two Score : "/>
+    
+    <ImageView
+        android:id="@+id/in_game_logo_image"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:src="@drawable/logo"
+        android:layout_below="@id/player_two_score_text"
+        android:layout_alignLeft="@id/player_two_score_text"/>
+    
+    <TextView
+        android:id="@+id/player_one_games_won_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dot_dice_total_text"
+        android:layout_below="@id/in_game_logo_image"
+        android:text="Player one games won : "/>
+    
+    <TextView
+        android:id="@+id/player_two_games_won_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dot_dice_total_text"
+        android:layout_below="@id/player_one_games_won_text"
+        android:text="Player two games won : "/>
+    
+</RelativeLayout>
